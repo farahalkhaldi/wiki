@@ -12,7 +12,7 @@ def page_list(request):
 
 def page_detail(request, page_id):
     context = {
-        "pages": Page.objects.get(id=page_id)
+        "page": Page.objects.get(id=page_id)
     }
     return render(request, 'detail.html', context)
 
