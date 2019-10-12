@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Detail</title>
-</head>
-<body>
-	{% for page in pages %}
-		<a href="{% url 'page-detail' page.id %}">
-			<ul>
-				<p>{{ page.title }}</p>
-            	<p>{{ page.content }}</p>
-            	<p>{{ page.last_update }}</p>
-			</ul>
-		</a>
-	{% endfor %}
-</body>
+	<head>
+		<meta charset="utf-8">
+		<title>Detail</title>
+	</head>
+	<body>
+		<ul>
+			<h2>{{ page.title }}</h2>
+			<p>{{ page.content}}</p>
+	        <p>{{ page.last_update }}</p>
+		</ul>
+	</body>
 </html>
